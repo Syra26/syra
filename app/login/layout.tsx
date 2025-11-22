@@ -1,15 +1,14 @@
 import '@/app/ui/global.css';
-import { Lusitana } from 'next/font/google';
-import { lusitana } from '../ui/fonts';
+import { lusitana } from '@/app/ui/fonts';
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang='en'>
-            <body className={`${lusitana.className} antialiased`}>{children}</body>
-        </html>
-    )
+  return (
+    <div className={`${lusitana.className} antialiased`}>
+      {children}
+    </div>
+  );
 }
